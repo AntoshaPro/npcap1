@@ -60,9 +60,9 @@ AppAsset::register($this);
 
     <div class="container">
 
-        <?= Html::a('Home', Url::to('/')) ?>
-        <?= Html::a('About', Url::to(['/about'])) ?>
-        <?= Html::a('Contact', Url::to(['/contact'])) ?>
+        <?= Html::a('Главная', Url::to('/')) ?>
+        <?= Html::a('Наше предприятие', Url::to(['/about'])) ?>
+        <?= Html::a('Контакты', Url::to(['/contact'])) ?>
 
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
