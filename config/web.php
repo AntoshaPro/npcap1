@@ -54,7 +54,8 @@ $config = [
                     'route' => 'site/index',
                     'suffix' => '',
                 ],
-                '<action:\w+>' => 'site/<action>',
+                '<action:(about|contact|login)>' => 'site/<action>',
+                '<a:(\w+)>' => 'post/<a>',
 
             ],
         ],
