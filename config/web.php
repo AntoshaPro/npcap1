@@ -55,7 +55,8 @@ $config = [
                     'suffix' => '',
                 ],
                 '<action:(about|contact|login)>' => 'site/<action>',
-                '<a:(\w+)>' => 'post/<a>',
+
+
 
             ],
         ],
