@@ -1,6 +1,7 @@
 <?php
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use mihaildev\ckeditor\CKEditor;
 ?>
 <h1>Test ACTION</h1>
 <?php if(Yii::$app->session->hasFlash('success')):?>
@@ -19,6 +20,13 @@ use yii\helpers\Html;
 <?= $form->field($model, 'name')->label('Имя')?>
 <?= $form->field($model, 'email')->input('email')?>
 <?= yii\jui\DatePicker::widget(['name' => 'attributeName']) ?>
-<?= $form->field($model, 'text')->label('Текст сообщения')->textarea(['rows'=> 5])?>
+<?php echo $form->field($model, 'text')->widget(CKEditor::className(),[
+    'editorOptions' => [
+        'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
+        'inline' => false, //по умолчанию false
+    ],
+]);
+?>
+
 <?= Html::submitButton('Отправить', ['class' => 'btn btn-success'])?>
 <?php ActiveForm::end() ?>
